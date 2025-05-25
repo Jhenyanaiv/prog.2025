@@ -8,27 +8,31 @@
 #pedir hora e minutos seprados 
 import sys
 
-print("informe a hora de saida" )
-hs = int (input("H: "))
-ms = int (input("M: "))
+try:
+    print("informe a hora de saida" )
+    hs = int (input("H: "))
+    ms = int (input("M: "))
 
-print("informe a hora de chegada" )
-hc = int (input("h: "))
-mc = int (input("m: "))
+    print("informe a hora de chegada" )
+    hc = int (input("h: "))
+    mc = int (input("m: "))
 
-print("informe a hora da pausa " )
-hd = int (input("h: "))
-md = int (input("m: "))
+    print("informe a hora da pausa " )
+    hd = int (input("h: "))
+    md = int (input("m: "))
 
-l = float (input("informe a quantidade de litros de combustivel gasto: "))
-if l <=0:
-    sys.exit('informe valor positivo :')
+    l = float (input("informe a quantidade de litros de combustivel gasto: "))
+    if l <=0:
+        sys.exit('informe valor positivo :')
 
-p = float (input("informe o preço do litro de combustivel: "))
-if p <=0:
-    sys.exit('informe valor positivo :')
+    p = float (input("informe o preço do litro de combustivel: "))
+    if p <=0:
+        sys.exit('informe valor positivo :')
 
-d = float (input("informe a distancia percorrida: "))
+    d = float (input("informe a distancia percorrida: "))
+
+except ValueError:
+    sys.exit("digite apenas números inteiros para horas ")
 
 # agora preciso tranformar o que ele me deu em horas, em minutos, presta atencao opara nao mutiplicar tudo 
 

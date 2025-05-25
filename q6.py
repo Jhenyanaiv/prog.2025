@@ -1,9 +1,16 @@
 import math
 
-print("informe  o comprimento dos lados" )
-a = float (input(" A: "))
-b = float (input(" B: "))
-c = float (input (" C: "))
+try:
+    print("informe  o comprimento dos lados" )
+    a = float (input(" A: "))
+    b = float (input(" B: "))
+    c = float (input (" C: "))
+    if a <= 0 or b <= 0 or c <= 0:
+        print("Os lados informados devem ser maiores que zero.")
+        exit()
+except ValueError:
+    print("Digite apenas números positivos.")
+    exit()
 
 #calcular se os lados formam um triangulo
 if a + b > c and a + c > b and b + c > a :

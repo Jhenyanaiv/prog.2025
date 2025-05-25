@@ -1,6 +1,11 @@
-print("informe  tempo que um veículo permaneceu no estacionamento" )
-h = int (input("H: "))
-m = int (input("M: "))
+try:
+    print("informe  tempo que um veículo permaneceu no estacionamento" )
+    h = int (input("H: "))
+    m = int (input("M: "))
+
+except ValueError:
+    print("digite apenas números inteiros para horas e minutos")
+    exit()
 
 totalm = h * 60 + m
 
