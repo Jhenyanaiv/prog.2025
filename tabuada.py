@@ -1,11 +1,19 @@
 import sys
 
-mult = int (input("informe o multiplicador"))
-    if v <=0:
-        sys.exit('informe valor positivo :')
+try:
 
+    multiplicador = int (input("informe o multiplicador"))
 except ValueError:
-    sys.exit("digite apenas números reais positivos")
+    sys.exit("digite apenas números inteiros positivos")
 
- mult1 = mult * 1
-    print("{mult1}")
+else:
+    if multiplicador < 0 :
+        sys.exit("digite um valor valido")
+
+multiplicando = 1 
+while multiplicando <= 10:
+    print (f"{multiplicador} X {multiplicando} = {multiplicador * multiplicando}")
+    multiplicando += 1
+
+print("fim da tabuada")
+
